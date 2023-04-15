@@ -92,22 +92,6 @@ function LoginForm() {
                 });
         }
 
-
-        // await fetch("https://127.0.0.1:8000/api/auth/fetch?email=mohakgoyal@jklu.edu.in",
-        //     {
-        //         method: 'GET'
-        //     })
-        //     .then(response => response.json())
-        //     .then(abc => {
-        //         // Do something with the response data
-        //         console.log(abc);
-        //     })
-        //     .catch(error => {
-        //         // Handle any errors that occur during the request
-        //         console.error(error);
-        //     });
-
-
     }
 
     return (
@@ -142,12 +126,6 @@ function LoginForm() {
                                 className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                             />
                         </div>
-                        {/* <a
-                            href="#"
-                            className="text-xs text-purple-600 hover:underline"
-                        >
-                            Forgot Password?
-                        </a> */}
                         <div className="mt-6">
                             <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-700 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
                                 Login
@@ -157,7 +135,6 @@ function LoginForm() {
 
                 </div>
             </div>
-
         </div>
     )
 }
