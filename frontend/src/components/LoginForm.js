@@ -18,79 +18,80 @@ function LoginForm() {
     }
 
     const submitHandler = async e => {
-        e.preventDefault();
-        // console.log(data);
-        // console.log(data['username'][0]);
-        const userid = data['username'][0];
-        console.log(userid.includes("@"));
+        navigate("studash");
+        // e.preventDefault();
+        // // console.log(data);
+        // // console.log(data['username'][0]);
+        // const userid = data['username'][0];
+        // console.log(userid.includes("@"));
 
-        if (userid.includes("@")) {
-            await fetch(`http://127.0.0.1:8000/api/auth/fetch?email=${userid}`,
-                {
-                    method: 'GET'
-                })
-                .then(response => response.json())
-                .then(resData => {
-                    // Do something with the response data
-                    if (!resData['message']) {
-                        if (data['password'][0] === resData['password']) {
+        // if (userid.includes("@")) {
+        //     await fetch(`http://127.0.0.1:8000/api/auth/fetch?email=${userid}`,
+        //         {
+        //             method: 'GET'
+        //         })
+        //         .then(response => response.json())
+        //         .then(resData => {
+        //             // Do something with the response data
+        //             if (!resData['message']) {
+        //                 if (data['password'][0] === resData['password']) {
 
-                            if (resData['role'] === "student") {
-                                navigate("studash");
-                            } else if (resData['role'] === "faculty") {
-                                navigate("facdash");
-                            } else if (resData['role'] === "admin") {
-                                navigate("admdash");
-                            }
-                            // navigate("home");
-                        }
-                        else {
-                            alert("Invalid UserId or Password!!")
-                        }
-                    }
-                    else {
-                        alert("Invalid UserId or Password!!")
-                    }
-                })
-                .catch(error => {
-                    // Handle any errors that occur during the request
-                    console.error(error);
-                    alert("Connection Error!!")
-                });
-        } else {
-            await fetch(`http://127.0.0.1:8000/api/auth/fetch?id=${userid}`,
-                {
-                    method: 'GET'
-                })
-                .then(response => response.json())
-                .then(resData => {
-                    // Do something with the response data
-                    if (!resData['message']) {
-                        if (data['password'][0] === resData['password']) {
+        //                     if (resData['role'] === "student") {
+        //                         navigate("studash");
+        //                     } else if (resData['role'] === "faculty") {
+        //                         navigate("facdash");
+        //                     } else if (resData['role'] === "admin") {
+        //                         navigate("admdash");
+        //                     }
+        //                     // navigate("home");
+        //                 }
+        //                 else {
+        //                     alert("Invalid UserId or Password!!")
+        //                 }
+        //             }
+        //             else {
+        //                 alert("Invalid UserId or Password!!")
+        //             }
+        //         })
+        //         .catch(error => {
+        //             // Handle any errors that occur during the request
+        //             console.error(error);
+        //             alert("Connection Error!!")
+        //         });
+        // } else {
+        //     await fetch(`http://127.0.0.1:8000/api/auth/fetch?id=${userid}`,
+        //         {
+        //             method: 'GET'
+        //         })
+        //         .then(response => response.json())
+        //         .then(resData => {
+        //             // Do something with the response data
+        //             if (!resData['message']) {
+        //                 if (data['password'][0] === resData['password']) {
 
-                            if (resData['role'] === "student") {
-                                navigate("studash");
-                            } else if (resData['role'] === "faculty") {
-                                navigate("facdash");
-                            } else if (resData['role'] === "admin") {
-                                navigate("admdash");
-                            }
-                            // history.push("/abc");
-                        }
-                        else {
-                            alert("Invalid UserId or Password!!")
-                        }
-                    }
-                    else {
-                        alert("Invalid UserId or Password!!")
-                    }
-                })
-                .catch(error => {
-                    // Handle any errors that occur during the request
-                    console.error(error);
-                    alert("Connection Error!!")
-                });
-        }
+        //                     if (resData['role'] === "student") {
+        //                         navigate("studash");
+        //                     } else if (resData['role'] === "faculty") {
+        //                         navigate("facdash");
+        //                     } else if (resData['role'] === "admin") {
+        //                         navigate("admdash");
+        //                     }
+        //                     // history.push("/abc");
+        //                 }
+        //                 else {
+        //                     alert("Invalid UserId or Password!!")
+        //                 }
+        //             }
+        //             else {
+        //                 alert("Invalid UserId or Password!!")
+        //             }
+        //         })
+        //         .catch(error => {
+        //             // Handle any errors that occur during the request
+        //             console.error(error);
+        //             alert("Connection Error!!")
+        //         });
+        // }
 
     }
 
