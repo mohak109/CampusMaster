@@ -120,8 +120,14 @@ Authentication.getAll = (title, result) => {
 //     });
 // };
 
-Authentication.removeAll = result => {
-    sql.query("DELETE FROM auths", (err, res) => {
+Authentication.remove = (title, result) => {
+    let query = "Delete FROM auths";
+
+    if (title) {
+        query += ` WHERE id LIKE '%${title}%'`;
+    }
+
+    sql.query(query, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);

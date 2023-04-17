@@ -6,6 +6,8 @@
 .pnp.js
 /src/components/Dashboard.js
 /src/components/NavBar.js
+/src/components/LoginForm.js
+
 
 # testing
 /coverage

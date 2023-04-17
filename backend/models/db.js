@@ -1,6 +1,6 @@
 // importing mysql module
 const mysql = require('mysql');
-const dbConfig = require("../config/db.config.js");
+const dbConfig = require("../db.config.js");
 
 //configuting mysql connections
 const connection = mysql.createConnection({

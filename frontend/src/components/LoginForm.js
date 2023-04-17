@@ -18,7 +18,7 @@ function LoginForm() {
     }
 
     const submitHandler = async e => {
-        navigate("studash");
+        navigate("admdash");
         // e.preventDefault();
         // // console.log(data);
         // // console.log(data['username'][0]);
@@ -37,11 +37,11 @@ function LoginForm() {
         //                 if (data['password'][0] === resData['password']) {
 
         //                     if (resData['role'] === "student") {
-        //                         navigate("studash");
+        //                         navigate("/studash");
         //                     } else if (resData['role'] === "faculty") {
-        //                         navigate("facdash");
+        //                         navigate("/facdash");
         //                     } else if (resData['role'] === "admin") {
-        //                         navigate("admdash");
+        //                         navigate("/admdash");
         //                     }
         //                     // navigate("home");
         //                 }

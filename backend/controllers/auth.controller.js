@@ -121,8 +121,9 @@ exports.findOne = (req, res) => {
 // };
 
 // Delete all Tutorials from the database.
-exports.deleteAll = (req, res) => {
-    Authentication.removeAll((err, data) => {
+exports.delete = (req, res) => {
+    const title = req.query.title;
+    Authentication.remove(title, (err, data) => {
         if (err)
             res.status(500).send({
                 message:

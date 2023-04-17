@@ -18,9 +18,11 @@ app.get("/", (req, res) => {
 });
 
 require("./routes/auth.routes.js")(app);
+require("./routes/stud.routes.js")(app);
+require("./routes/fac.routes.js")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, '0.0.0.0', () => {
-    console.log("Welcome to CampusMaster application.\n"+`Server is running on port ${PORT}.`);
+    console.log("Welcome to CampusMaster application.\n" + `Server is running on port ${PORT}.`);
 });
