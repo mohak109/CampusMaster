@@ -92,7 +92,6 @@ function LoginForm() {
                     alert("Connection Error!!")
                 });
         }
-
     }
 
     return (

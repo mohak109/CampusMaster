@@ -53,8 +53,8 @@ function AddNewCourse() {
     }
 
     return (
-        <div className="flex">
-            <SideBar active={3} />
+        // <div className="flex">
+        //     <SideBar active={3} />
             <div className="p-7 text-2xl font-semibold flex-1 h-screen overflow-auto">
                 <section className="bg-white dark:bg-gray-900">
                     <div className="py-12 px-4 mx-auto">
@@ -85,7 +85,7 @@ function AddNewCourse() {
                     </div>
                 </section>
             </div>
-        </div>
+        // </div>
     );
 
 }

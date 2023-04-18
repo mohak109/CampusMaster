@@ -7,179 +7,64 @@ import ViewStud from "./ViewStudents";
 const AdmDashboard = () => {
 
     return (
-        <div className="flex">
-            <SideBar active={0} />
-            <div className="p-7 text-xl font-semibold flex-1 h-screen">
-                <div className="content container-fluid">
-                    <div className="page-header">
-                        <div className="row">
-                            <div className="col-sm-12">
-                                <ul className="breadcrumb">
-                                    <li className="breadcrumb-item active">Dashboard</li>
-                                </ul>
+        // <div className="flex">
+        //     <SideBar active={0} />
+            <div className="px-32 text-xl font-semibold flex-1 h-screen overflow-auto">
+
+                <div className="flex flex-col md:flex-row pt-10">
+                    <section>
+                        <div id="main" className="main-content flex-1  mt-12 md:mt-2 pb-24 md:pb-5">
+                            <div className=" ">
+                                <div className="rounded-t-2xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
+                                    <h1 className="font-bold pl-2">Summary</h1>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-xl-3 col-sm-6 col-12 d-flex">
-                            <div className="card bg-one w-100">
-                                <div className="card-body">
-                                    <div className="db-widgets d-flex justify-content-between align-items-center">
-                                        <div className="db-icon">
-                                            <i className="fas fa-user-graduate"></i>
-                                        </div>
-                                        <div className="db-info">
-                                            <h3>50055</h3>
-                                            <h6>Students</h6>
+
+                            <div className="flex flex-wrap">
+                                <div className="w-full md:w-1/2 xl:w-1/3 p-6">
+                                    {/* <!--Metric Card--> */}
+                                    <div className="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5">
+                                        <div className="flex flex-row items-center">
+                                            <div className="flex-1 text-right md:text-center">
+                                                <h2 className="font-bold uppercase text-gray-600">Total Students</h2>
+                                                <p className="font-bold text-3xl">120 <span className="text-green-500"></span></p>
+                                            </div>
                                         </div>
                                     </div>
+                                    {/* <!--/Metric Card--> */}
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-sm-6 col-12 d-flex">
-                            <div className="card bg-two w-100">
-                                <div className="card-body">
-                                    <div className="db-widgets d-flex justify-content-between align-items-center">
-                                        <div className="db-icon">
-                                            <i className="fas fa-crown"></i>
-                                        </div>
-                                        <div className="db-info">
-                                            <h3>50+</h3>
-                                            <h6>Awards</h6>
+                                <div className="w-full md:w-1/2 xl:w-1/3 p-6">
+                                    {/* <!--Metric Card--> */}
+                                    <div className="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5">
+                                        <div className="flex flex-row items-center">
+                                            <div className="flex-1 text-right md:text-center">
+                                                <h2 className="font-bold uppercase text-gray-600">Total Faculty Members</h2>
+                                                <p className="font-bold text-3xl">249 <span className="text-pink-500"></span></p>
+                                            </div>
                                         </div>
                                     </div>
+                                    {/* <!--/Metric Card--> */}
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-sm-6 col-12 d-flex">
-                            <div className="card bg-three w-100">
-                                <div className="card-body">
-                                    <div className="db-widgets d-flex justify-content-between align-items-center">
-                                        <div className="db-icon">
-                                            <i className="fas fa-building"></i>
-                                        </div>
-                                        <div className="db-info">
-                                            <h3>30+</h3>
-                                            <h6>Department</h6>
+                                <div className="w-full md:w-1/2 xl:w-1/3 p-6">
+                                    {/* <!--Metric Card--> */}
+                                    <div className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-5">
+                                        <div className="flex flex-row items-center">
+                                            <div className="flex-1 text-right md:text-center">
+                                                <h2 className="font-bold uppercase text-gray-600">Total Users</h2>
+                                                <p className="font-bold text-3xl">2 <span className="text-yellow-600"></span></p>
+                                            </div>
                                         </div>
                                     </div>
+                                    {/* <!--/Metric Card--> */}
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-sm-6 col-12 d-flex">
-                            <div className="card bg-four w-100">
-                                <div className="card-body">
-                                    <div className="db-widgets d-flex justify-content-between align-items-center">
-                                        <div className="db-icon">
-                                            <i className="fas fa-file-invoice-dollar"></i>
-                                        </div>
-                                        <div className="db-info">
-                                            <h3>$505</h3>
-                                            <h6>Revenue</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br/>
-                    
-                    <div className="row">
-                        <div className="col-md-6 d-flex">
-                            <div className="card flex-fill">
-                                <div className="card-header">
-                                    <h5 className="card-title">Star Students</h5>
-                                </div>
-                                <div className="card-body">
-                                    <div className="table-responsive">
-                                        <table className="table table-hover table-center">
-                                            <thead className="thead-light">
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th className="text-center">Marks</th>
-                                                    <th className="text-center">Percentage</th>
-                                                    <th className="text-right">Year</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td className="text-nowrap">John Smith</td>
-                                                    <td className="text-center">1185</td>
-                                                    <td className="text-center">98%</td>
-                                                    <td className="text-right">
-                                                        <div>2019</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="text-nowrap">Jolie Hoskins</td>
-                                                    <td className="text-center">1195</td>
-                                                    <td className="text-center">99.5%</td>
-                                                    <td className="text-right">
-                                                        <div>2018</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="text-nowrap">Pennington Joy</td>
-                                                    <td className="text-center">1196</td>
-                                                    <td className="text-center">99.6%</td>
-                                                    <td className="text-right">
-                                                        <div>2017</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="text-nowrap">Millie Marsden</td>
-                                                    <td className="text-center">1187</td>
-                                                    <td className="text-center">98.2%</td>
-                                                    <td className="text-right">
-                                                        <div>2016</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="text-nowrap">John Smith</td>
-                                                    <td className="text-center">1185</td>
-                                                    <td className="text-center">98%</td>
-                                                    <td className="text-right">
-                                                        <div>2015</div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 d-flex">
-                            <div className="card flex-fill">
-                                <div className="card-header">
-                                    <h5 className="card-title">Student Activity</h5>
-                                </div>
-                                <div className="card-body">
-                                    <ul className="activity-feed">
-                                        <li className="feed-item">
-                                            <div className="feed-date">Apr 13</div>
-                                            <span className="feed-text"><a>John Doe</a> won 1st place in <a>"Chess"</a></span>
-                                        </li>
-                                        <li className="feed-item">
-                                            <div className="feed-date">Mar 21</div>
-                                            <span className="feed-text"><a>Justin Lee</a> participated in <a href="invoice.html">"Carrom"</a></span>
-                                        </li>
-                                        <li className="feed-item">
-                                            <div className="feed-date">Feb 2</div>
-                                            <span className="feed-text"><a>Justin Lee</a>attended internation conference in <a href="profile.html">"St.John School"</a></span>
-                                        </li>
-                                        <li className="feed-item">
-                                            <div className="feed-date">Apr 13</div>
-                                            <span className="feed-text"><a>John Doe</a> won 1st place in <a>"Chess"</a></span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </section>
                 </div>
+
             </div>
 
-        </div>
+        // </div>
     );
 
 }

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Menus from "./content";
+import Menus from "../shared/content";
 
-const SideBar = ({ active }) => {
+const SideBar = (props) => {
 
+    const active = props.active;
+    
     const navigate = useNavigate();
     const [open, setOpen] = useState(true);
 

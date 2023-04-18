@@ -52,8 +52,8 @@ function ViewCour() {
     }
 
     return (
-        <div className="flex">
-            <SideBar active={3} />
+        // <div className="flex">
+        //     <SideBar active={3} />
             <div className="p-7 text-2xl font-semibold flex-1 h-screen overflow-auto">
                 <div className="flex flex-col">
                     <div className="overflow-x-auto">
@@ -83,7 +83,7 @@ function ViewCour() {
                                 </div>
                             </div>
                             <div className="ml-96">
-                                <button onClick={() => { navigate("/addcour") }} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded mb-2 my-1 text-base">
+                                <button onClick={() => { navigate("/adm/newcour") }} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded mb-2 my-1 text-base">
                                     Add New Course
                                 </button>
                             </div>
@@ -149,7 +149,7 @@ function ViewCour() {
                     </div>
                 </div>
             </div>
-        </div>
+        // </div>
     );
 }
 
