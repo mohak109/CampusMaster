@@ -20,7 +20,7 @@ const SideBar = (props) => {
                 <div className="flex gap-x-4 items-center">
                     <img src="/assets/logo.png" alt="" className={`cursor-pointer duration-500 w-20`} />
                     <h1 className={`text-white origin-left font-medium text-xl duration-300
-                ${!open && "scale-0"}`}>Welcome, {name ? name : "Admin"}</h1>
+                ${!open && "scale-0"}`}>Welcome, {name ? name : "Student"}</h1>
                 </div>
                 <ul className="pt-20">
                     {Menus.map((menu, index) =>

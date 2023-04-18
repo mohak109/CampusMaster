@@ -7,7 +7,7 @@ import SideBar from "./Sidebar/SideBar";
 function AdmHomepage() {
 
     const location = useLocation();
-    const id = location.state.id ? location.state.id : null;
+    const id = location.state.id;
     // console.log(id);
 
     const [name, setName] = useState("");

@@ -37,7 +37,7 @@ function LoginForm() {
                         if (data['password'][0] === resData['password']) {
 
                             if (resData['role'] === "student") {
-                                navigate("/studash");
+                                navigate("/stu/dash");
                             } else if (resData['role'] === "faculty") {
                                 navigate("/facdash");
                             } else if (resData['role'] === "admin") {
@@ -73,11 +73,19 @@ function LoginForm() {
                         if (data['password'][0] === resData['password']) {
 
                             if (resData['role'] === "student") {
-                                navigate("studash");
+                                navigate("/stu/dash", {
+                                    state: {
+                                        id: username
+                                    }
+                                });
                             } else if (resData['role'] === "faculty") {
-                                navigate("facdash");
+                                navigate("/facdash");
                             } else if (resData['role'] === "admin") {
-                                navigate("admdash");
+                                navigate("/adm/dash", {
+                                    state: {
+                                        id: resData['id']
+                                    }
+                                });
                             }
                             // history.push("/abc");
                         }

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Attendance from './New folder/attendance';
-import RegisteredCourses from './New folder/registeredCourses';
-import CourseRegistration from './New folder/RegisterForCourses';
-import { Route, Routes } from 'react-router-dom';
+// import axios from 'axios';
+// import Attendance from './New folder/attendance';
+// import RegisteredCourses from './New folder/registeredCourses';
+// import CourseRegistration from './New folder/RegisterForCourses';
+// import { Route, Routes } from 'react-router-dom';
 
 
 const StuDashboard = () => {

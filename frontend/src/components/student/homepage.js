@@ -7,21 +7,22 @@ import SideBar from "./Sidebar/SideBar";
 function StuHomepage() {
 
     // const location = useLocation();
-    // const id = location.state.id ? location.state.id : null;
-    // // console.log(id);
+    // const id = location.state.id;
+    // console.log(id);
 
-    // const [name, setName] = useState("");
+    const [name, setName] = useState("");
 
     // useEffect(() => async () => {
     //     // if (userid.includes("@")) {
-    //     await fetch(`http://127.0.0.1:8000/api/auth?title=${id}`,
+    //     await fetch(`http://127.0.0.1:8000/api/stud?title=${id}`,
     //         { method: 'GET' })
     //         .then(response => response.json())
     //         // .then(response => response.json())
     //         .then(resData => {
     //             // Do something with the response data
-    //             console.log(resData[0].email);
-    //             setName(resData[0].id)
+    //             console.log(resData);
+    //             setName(resData[0].first_name+" "+resData[0].last_name)
+    //             console.log(name);
     //         })
     //         .catch(error => {
     //             // Handle any errors that occur during the request

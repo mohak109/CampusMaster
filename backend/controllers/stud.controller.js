@@ -54,11 +54,11 @@ exports.findOne = (req, res) => {
             if (err) {
                 if (err.kind === "not_found") {
                     res.status(404).send({
-                        message: `Not found auth with Id ${req.query.id}.`
+                        message: `Not found student with Id ${req.query.id}.`
                     });
                 } else {
                     res.status(500).send({
-                        message: `Error retrieving auth with Id ${req.query.id}`
+                        message: `Error retrieving student with Id ${req.query.id}`
                     });
                 }
             } else res.send(data);

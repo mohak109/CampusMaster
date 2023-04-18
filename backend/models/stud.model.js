@@ -28,7 +28,7 @@ Student.create = (newStud, result) => {
 };
 
 Student.findById = (id, result) => {
-    sql.query(`SELECT * FROM student WHERE rollno = "${rollno}"`, (err, res) => {
+    sql.query(`SELECT * FROM student WHERE rollno = "${id}"`, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(err, null);
@@ -69,7 +69,7 @@ Student.getAll = (title, result) => {
     let query = "SELECT * FROM student";
 
     if (title) {
-        query += ` WHERE title LIKE '%${title}%'`;
+        query += ` WHERE rollno LIKE '%${title}%'`;
     }
 
     sql.query(query, (err, res) => {
