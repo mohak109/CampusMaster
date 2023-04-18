@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, createSearchParams } from 'react-router-dom';
 
 
 function LoginForm() {
@@ -41,9 +41,12 @@ function LoginForm() {
                             } else if (resData['role'] === "faculty") {
                                 navigate("/facdash");
                             } else if (resData['role'] === "admin") {
-                                navigate("/admdash");
+                                navigate("/adm/dash", {
+                                    state: {
+                                        id: resData['id']
+                                    }
+                                });
                             }
-                            // navigate("home");
                         }
                         else {
                             alert("Invalid UserId or Password!!")

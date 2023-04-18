@@ -21,6 +21,7 @@ require("./routes/auth.routes.js")(app);
 require("./routes/stud.routes.js")(app);
 require("./routes/fac.routes.js")(app);
 require("./routes/cour.routes.js")(app);
+require("./routes/need.routes.js")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8000;

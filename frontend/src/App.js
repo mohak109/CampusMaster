@@ -5,17 +5,9 @@ import './App.css';
 import LoginForm from './components/LoginForm';
 import { Routes, Route } from "react-router-dom";
 // import StudDashboard from './components/student/StudDashboard';
-// import FacDashboard from './components/faculty/FacDashboard';
-// import AdmDashboard from './components/admin/AdmDashboard';
-// import ViewStud from './components/admin/ViewStudents';
-// import AddNewStudent from './components/admin/AddStudent';
-// import ViewFac from './components/admin/ViewFaculty';
-// import AddNewFaculty from './components/admin/AddFaculty';
-// import ViewCour from './components/admin/ViewCourses';
-// import AddNewCourse from './components/admin/AddCourse';
-// import AcadCal from './components/admin/ViewAcadCal';
-// import HonorsList from './components/admin/viewHonors';
-import Homepage from './components/admin/homepage';
+import FacDashboard from './components/faculty/FacDashboard';
+import AdmHomepage from './components/admin/homepage';
+import StuHomepage from './components/student/homepage';
 
 class App extends Component {
   render() {
@@ -23,12 +15,13 @@ class App extends Component {
       <>
         <Routes>
           <Route path="/" element={<LoginForm />} />
-          <Route path="/adm/:url" element={<Homepage />} />
+          <Route path="/adm/:url" element={<AdmHomepage />} />
+          <Route path="/stu/:url" element={<StuHomepage />} />
+          <Route path="/fac/:url" element={<FacDashboard />} />
 
           <Route path="*" element={<LoginForm />} />
         </Routes>
       </>
-
     )
   };
 }
