@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const http = require('http').Server(express);
+// const http = require('http').Server(express);
 
 app.use(cors());
 
@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
 require("./routes/auth.routes.js")(app);
 require("./routes/stud.routes.js")(app);
 require("./routes/fac.routes.js")(app);
+require("./routes/cour.routes.js")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8000;

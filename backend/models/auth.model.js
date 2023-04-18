@@ -63,7 +63,7 @@ Authentication.getAll = (title, result) => {
     let query = "SELECT * FROM auths";
 
     if (title) {
-        query += ` WHERE title LIKE '%${title}%'`;
+        query += ` WHERE id LIKE '%${title}%'`;
     }
 
     sql.query(query, (err, res) => {
@@ -77,48 +77,6 @@ Authentication.getAll = (title, result) => {
         result(null, res);
     });
 };
-
-// Authentication.updateById = (id, tutorial, result) => {
-//     sql.query(
-//         "UPDATE auths SET title = ?, description = ?, published = ? WHERE id = ?",
-//         [tutorial.title, tutorial.description, tutorial.published, id],
-//         (err, res) => {
-//             if (err) {
-//                 console.log("error: ", err);
-//                 result(null, err);
-//                 return;
-//             }
-
-//             if (res.affectedRows == 0) {
-//                 // not found Authentication with the id
-//                 result({ kind: "not_found" }, null);
-//                 return;
-//             }
-
-//             console.log("updated tutorial: ", { id: id, ...tutorial });
-//             result(null, { id: id, ...tutorial });
-//         }
-//     );
-// };
-
-// Authentication.remove = (id, result) => {
-//     sql.query("DELETE FROM auths WHERE id = ?", id, (err, res) => {
-//         if (err) {
-//             console.log("error: ", err);
-//             result(null, err);
-//             return;
-//         }
-
-//         if (res.affectedRows == 0) {
-//             // not found Authentication with the id
-//             result({ kind: "not_found" }, null);
-//             return;
-//         }
-
-//         console.log("deleted tutorial with id: ", id);
-//         result(null, res);
-//     });
-// };
 
 Authentication.remove = (title, result) => {
     let query = "Delete FROM auths";

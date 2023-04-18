@@ -8,9 +8,7 @@ const AdmDashboard = () => {
 
     return (
         <div className="flex">
-
             <SideBar active={0} />
-
             <div className="p-7 text-xl font-semibold flex-1 h-screen">
                 <div className="content container-fluid">
                     <div className="page-header">

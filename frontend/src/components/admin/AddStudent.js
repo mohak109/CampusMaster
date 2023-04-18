@@ -41,7 +41,8 @@ function AddNewStudent() {
         e.preventDefault();
         // console.log(data);
         // console.log(data['username'][0]);
-        const userid = data;
+        console.log(data)
+        // const userid = data;
 
         await fetch(`http://127.0.0.1:8000/api/auth/`,
             {
@@ -89,24 +90,6 @@ function AddNewStudent() {
                 console.error(error);
                 alert("Connection Error!!")
             });
-
-        // await fetch(`http://127.0.0.1:8000/api/stud/`,
-        //     {
-        //         method: 'POST',
-        //         body: JSON.stringify(data),
-        //         headers: { "Content-Type": "application/json" }
-        //     })
-        //     .then(response => response.json())
-        //     .then(resData => {
-        //         // Do something with the response data
-        //         console.log(resData);
-        //     })
-        //     .catch(error => {
-        //         // Handle any errors that occur during the request
-        //         console.error(error);
-        //         alert("Connection Error!!")
-
-        //     });
     }
 
     return (
@@ -166,7 +149,7 @@ function AddNewStudent() {
                                     <input type="password" name="password" value={password} onChange={passHandler} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Enter the temporary password" required />
                                 </div>
                             </div>
-                            <button type="submit" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">ADD</button>
+                            <button type="submit" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Add Student</button>
                         </form>
                     </div>
                 </section>

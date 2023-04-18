@@ -10,6 +10,11 @@ import AdmDashboard from './components/admin/AdmDashboard';
 import ViewStud from './components/admin/ViewStudents';
 import AddNewStudent from './components/admin/AddStudent';
 import ViewFac from './components/admin/ViewFaculty';
+import AddNewFaculty from './components/admin/AddFaculty';
+import ViewCour from './components/admin/ViewCourses';
+import AddNewCourse from './components/admin/AddCourse';
+import AcadCal from './components/admin/ViewAcadCal';
+import HonorsList from './components/admin/viewHonors';
 
 class App extends Component {
   render() {
@@ -23,6 +28,11 @@ class App extends Component {
           <Route path="/viewstud" element={<ViewStud />} />
           <Route path="/addstud" element={<AddNewStudent />} />
           <Route path="/viewfac" element={<ViewFac />} />
+          <Route path="/addfac" element={<AddNewFaculty />} />
+          <Route path="/viewcour" element={<ViewCour />} />
+          <Route path="/addcour" element={<AddNewCourse />} />
+          <Route path="/viewacadcal" element={<AcadCal />} />
+          <Route path="/viewhonors" element={<HonorsList />} />
 
           <Route path="*" element={<LoginForm />} />
         </Routes>

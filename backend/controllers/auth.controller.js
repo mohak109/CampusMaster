@@ -73,53 +73,6 @@ exports.findOne = (req, res) => {
         });
 };
 
-// // Update a Tutorial identified by the id in the request
-// exports.update = (req, res) => {
-//     // Validate Request
-//     if (!req.body) {
-//         res.status(400).send({
-//             message: "Content can not be empty!"
-//         });
-//     }
-
-//     console.log(req.body);
-
-//     Tutorial.updateById(
-//         req.query.id,
-//         new Tutorial(req.body),
-//         (err, data) => {
-//             if (err) {
-//                 if (err.kind === "not_found") {
-//                     res.status(404).send({
-//                         message: `Not found Tutorial with id ${req.query.id}.`
-//                     });
-//                 } else {
-//                     res.status(500).send({
-//                         message: "Error updating Tutorial with id " + req.query.id
-//                     });
-//                 }
-//             } else res.send(data);
-//         }
-//     );
-// };
-
-// // Delete a Tutorial with the specified id in the request
-// exports.delete = (req, res) => {
-//     Tutorial.remove(req.query.id, (err, data) => {
-//         if (err) {
-//             if (err.kind === "not_found") {
-//                 res.status(404).send({
-//                     message: `Not found Tutorial with id ${req.query.id}.`
-//                 });
-//             } else {
-//                 res.status(500).send({
-//                     message: "Could not delete Tutorial with id " + req.query.id
-//                 });
-//             }
-//         } else res.send({ message: `Tutorial was deleted successfully!` });
-//     });
-// };
-
 // Delete all Tutorials from the database.
 exports.delete = (req, res) => {
     const title = req.query.title;

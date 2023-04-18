@@ -3,21 +3,27 @@ import SideBar from "./Sidebar/SideBar";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function ViewStud() {
+function ViewCour() {
 
     const navigate = useNavigate();
 
-    const [stud, setStud] = useState([]);
+    const [cour, setCour] = useState([]);
 
     useEffect(() => async () => {
+
+        // console.log(data);
+        // console.log(data['username'][0]);
+        // const userid = data['username'][0];
+        // console.log(userid.includes("@"));
+
         // if (userid.includes("@")) {
-        await axios.get(`http://127.0.0.1:8000/api/stud/`,
+        await axios.get(`http://127.0.0.1:8000/api/cour/`,
         )
             // .then(response => response.json())
             .then(resData => {
                 // Do something with the response data
                 // if (mounted) {
-                setStud(resData.data);
+                setCour(resData.data);
                 // }
                 console.log(resData.data);
             })
@@ -35,7 +41,7 @@ function ViewStud() {
     }, []);
 
     const deleteHandler = async (id) => {
-        await fetch(`http://localhost:8000/api/stud/delete?title=${id}`, { method: 'DELETE' })
+        await fetch(`http://localhost:8000/api/cour/delete?title=${id}`, { method: 'DELETE' })
             .then(response => response.json())
             .then(async resData => {
                 console.log(resData);
@@ -47,7 +53,7 @@ function ViewStud() {
 
     return (
         <div className="flex">
-            <SideBar active={1} />
+            <SideBar active={3} />
             <div className="p-7 text-2xl font-semibold flex-1 h-screen overflow-auto">
                 <div className="flex flex-col">
                     <div className="overflow-x-auto">
@@ -77,8 +83,8 @@ function ViewStud() {
                                 </div>
                             </div>
                             <div className="ml-96">
-                                <button onClick={() => { navigate("/addstud") }} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded mb-2 my-1 text-base">
-                                    Add New Student
+                                <button onClick={() => { navigate("/addcour") }} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded mb-2 my-1 text-base">
+                                    Add New Course
                                 </button>
                             </div>
                         </div>
@@ -92,31 +98,19 @@ function ViewStud() {
                                                 scope="col"
                                                 className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
                                             >
-                                                Roll No
+                                                Course Code
                                             </th>
                                             <th
                                                 scope="col"
                                                 className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
                                             >
-                                                Name
+                                                Course Name
                                             </th>
                                             <th
                                                 scope="col"
                                                 className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
                                             >
-                                                Email
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                                            >
-                                                Program
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                                            >
-                                                Batch
+                                                Credits
                                             </th>
                                             <th
                                                 scope="col"
@@ -127,27 +121,21 @@ function ViewStud() {
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-200">
-                                        {stud.map((item, key) => (
+                                        {cour.map((item, key) => (
                                             <tr>
                                                 <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                                                    {item.rollno}
+                                                    {item.course_code}
                                                 </td>
                                                 <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                                                    {item.first_name + " " + item.middle_name + " " + item.last_name}
+                                                    {item.course_name}
                                                 </td>
                                                 <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                                                    {item.off_email}
-                                                </td>
-                                                <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                                                    {item.enr_program}
-                                                </td>
-                                                <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                                                    {item.batch}
+                                                    {item.credits}
                                                 </td>
                                                 <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
                                                     <a
                                                         className="text-green-400 hover:text-red-700 cursor-pointer"
-                                                        onClick={() => { deleteHandler(item.rollno) }}
+                                                        onClick={() => { deleteHandler(item.course_code) }}
                                                     >
                                                         Delete
                                                     </a>
@@ -165,4 +153,4 @@ function ViewStud() {
     );
 }
 
-export default ViewStud;
+export default ViewCour;

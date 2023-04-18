@@ -170,7 +170,7 @@ function ViewFac() {
                                                 <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
                                                     <a
                                                         className="text-green-400 hover:text-red-700 cursor-pointer"
-                                                        onClick={() => { deleteHandler(item.rollno) }}
+                                                        onClick={() => { deleteHandler(item.fac_id) }}
                                                     >
                                                         Delete
                                                     </a>
