@@ -6,30 +6,30 @@ import SideBar from "./Sidebar/SideBar";
 
 function AdmHomepage() {
 
-    const location = useLocation();
-    const id = location.state.id;
-    // console.log(id);
+    // const location = useLocation();
+    // const id = location.state.id;
+    // // console.log(id);
 
-    const [name, setName] = useState("");
+    // const [name, setName] = useState("");
 
-    useEffect(() => async () => {
-        // if (userid.includes("@")) {
-        await fetch(`http://127.0.0.1:8000/api/auth?title=${id}`,
-            { method: 'GET' })
-            .then(response => response.json())
-            // .then(response => response.json())
-            .then(resData => {
-                // Do something with the response data
-                console.log(resData[0].email);
-                setName(resData[0].id)
-            })
-            .catch(error => {
-                // Handle any errors that occur during the request
-                console.error(error);
-                alert("Connection Error!!")
-            })
+    // useEffect(() => async () => {
+    //     // if (userid.includes("@")) {
+    //     await fetch(`http://127.0.0.1:8000/api/auth?title=${id}`,
+    //         { method: 'GET' })
+    //         .then(response => response.json())
+    //         // .then(response => response.json())
+    //         .then(resData => {
+    //             // Do something with the response data
+    //             console.log(resData[0].email);
+    //             setName(resData[0].id)
+    //         })
+    //         .catch(error => {
+    //             // Handle any errors that occur during the request
+    //             console.error(error);
+    //             alert("Connection Error!!")
+    //         })
 
-    }, [name]);
+    // }, [name]);
 
     const { url } = useParams();
     const filteredData = Display.filter((item) => item.url === url);
@@ -37,7 +37,7 @@ function AdmHomepage() {
 
     return (
         <div className="flex">
-            <SideBar active={filteredData[0].active} name={name} />
+            <SideBar active={filteredData[0].active} /*name={name}*/ />
             {filteredData[0].element}
         </div>
     );

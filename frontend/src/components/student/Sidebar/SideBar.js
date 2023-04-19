@@ -12,7 +12,7 @@ const SideBar = (props) => {
 
     return (
         <aside className="sticky top-0 h-screen">
-            <div className={`${open ? 'w-72' : 'w-24'} duration-300 h-screen p-6 pt-10 bg-dark-purple`}>
+            <div className={`${open ? 'w-72' : 'w-24'} duration-300 h-screen p-6 pt-10 bg-green-900`}>
                 <img src="/assets/admin/Control.png" alt=""
                     className={`absolute cursor-pointer rounded-full
                 -right-2.5 top-14 w-6 border-2 border-dark-purple ${!open && 'rotate-180'}`}

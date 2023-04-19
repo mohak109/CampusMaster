@@ -25,7 +25,7 @@ const AdmDashboard = () => {
                                     <div className="flex flex-row items-center">
                                         <div className="flex-1 text-right md:text-center">
                                             <h2 className="font-bold uppercase text-gray-600">Total Students</h2>
-                                            <p className="font-bold text-3xl">120 <span className="text-green-500"></span></p>
+                                            <p className="font-bold text-3xl">200 <span className="text-green-500"></span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -37,7 +37,7 @@ const AdmDashboard = () => {
                                     <div className="flex flex-row items-center">
                                         <div className="flex-1 text-right md:text-center">
                                             <h2 className="font-bold uppercase text-gray-600">Total Faculty Members</h2>
-                                            <p className="font-bold text-3xl">249 <span className="text-pink-500"></span></p>
+                                            <p className="font-bold text-3xl">90 <span className="text-pink-500"></span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@ const AdmDashboard = () => {
                                     <div className="flex flex-row items-center">
                                         <div className="flex-1 text-right md:text-center">
                                             <h2 className="font-bold uppercase text-gray-600">Total Users</h2>
-                                            <p className="font-bold text-3xl">2 <span className="text-yellow-600"></span></p>
+                                            <p className="font-bold text-3xl">290 <span className="text-yellow-600"></span></p>
                                         </div>
                                     </div>
                                 </div>
