@@ -5,7 +5,7 @@ import './App.css';
 import LoginForm from './components/LoginForm';
 import { Routes, Route } from "react-router-dom";
 // import StudDashboard from './components/student/StudDashboard';
-import FacDashboard from './components/faculty/FacDashboard';
+import FacHomepage from './components/faculty/homepage';
 import AdmHomepage from './components/admin/homepage';
 import StuHomepage from './components/student/homepage';
 
@@ -17,7 +17,7 @@ class App extends Component {
           <Route path="/" element={<LoginForm />} />
           <Route path="/adm/:url" element={<AdmHomepage />} />
           <Route path="/stu/:url" element={<StuHomepage />} />
-          <Route path="/fac/:url" element={<FacDashboard />} />
+          <Route path="/fac/:url" element={<FacHomepage />} />
 
           <Route path="*" element={<LoginForm />} />
         </Routes>

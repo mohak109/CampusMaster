@@ -79,7 +79,11 @@ function LoginForm() {
                                     }
                                 });
                             } else if (resData['role'] === "faculty") {
-                                navigate("/facdash");
+                                navigate("/fac/dash", {
+                                    state: {
+                                        id: resData['id']
+                                    }
+                                });
                             } else if (resData['role'] === "admin") {
                                 navigate("/adm/dash", {
                                     state: {
